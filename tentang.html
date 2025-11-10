@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - ResepKu</title>
+    <link rel="icon" href="images/logo-web.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo-web.png" alt="ResepKu Logo">
+                <span>ResepKu</span>
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#resep-section">Resep</a></li>
+                    <li><a href="upload.html">Upload Resep</a></li>
+                    <li><a href="tentang.html" class="active">Tentang</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <div class="container">
+                <h2>Tentang ResepKu</h2>
+                <p>
+                    ResepKu adalah sebuah platform digital yang didedikasikan untuk para ibu rumah tangga dan siapa saja yang memiliki semangat memasak di dapur. Kami mengerti bahwa mencari inspirasi masakan sehari-hari yang praktis, lezat, dan teruji bisa menjadi tantangan. Oleh karena itu, ResepKu hadir sebagai solusi satu atap, menyediakan kumpulan resep masakan rumahan yang mudah diikuti, mulai dari hidangan tradisional hingga kreasi modern. Tujuan utama kami adalah memberdayakan para ibu untuk menyajikan hidangan terbaik bagi keluarga dengan cara yang lebih efisien dan menyenangkan.
+                </p>
+                <p>
+                    Keunggulan utama ResepKu terletak pada detail dan kemudahan akses. Setiap resep tidak hanya dilengkapi dengan daftar bahan dan langkah-langkah pembuatan yang jelas, tetapi juga informasi tambahan seperti sejarah singkat hidangan dan peralatan yang dibutuhkan, memberikan wawasan lebih dari sekadar cara memasak. Fitur pencarian yang intuitif memungkinkan Anda menemukan resep dengan cepat, sementara desain yang responsif memastikan pengalaman pengguna yang optimal di berbagai perangkat, baik itu ponsel, tablet, maupun desktop. Dengan ResepKu, kami berharap dapat menjadi sahabat terpercaya Anda di dapur.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 ResepKu. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script untuk hamburger menu dan header scroll
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const header = document.querySelector('.main-header');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active'); // Add this line
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

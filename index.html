@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResepKu - Inspirasi Dapur Setiap Hari</title>
+    <link rel="icon" href="images/logo-web.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo-web.png" alt="ResepKu Logo">
+                <span>ResepKu</span>
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html#resep-section">Resep</a></li>
+                    <li><a href="upload.html">Upload Resep</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1>Inspirasi Dapur Setiap Hari</h1>
+                <p>Temukan resep masakan nusantara yang otentik, praktis, dan lezat untuk keluarga Anda.</p>
+                <a href="#resep-section" class="btn btn-primary">Jelajahi Resep</a>
+            </div>
+        </section>
+
+        <section id="resep-section" class="recipe-section">
+            <div class="container">
+                <h2>Temukan Resep Favoritmu</h2>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Cari berdasarkan nama resep...">
+                </div>
+                <div id="recipe-grid" class="recipe-grid">
+                    <!-- Kartu resep akan dimuat oleh JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 ResepKu. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Script untuk hamburger menu dan header scroll
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const header = document.querySelector('.main-header');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active'); // Add this line
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

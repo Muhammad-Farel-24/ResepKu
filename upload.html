@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Resep - ResepKu</title>
+    <link rel="icon" href="images/logo-web.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo-web.png" alt="ResepKu Logo">
+                <span>ResepKu</span>
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#resep-section">Resep</a></li>
+                    <li><a href="upload.html" class="active">Upload Resep</a></li>
+                    <li><a href="tentang.html">Tentang</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="upload-section">
+            <div class="container">
+                <form id="recipe-form">
+                    <h2 id="form-title">Upload Resep Baru</h2>
+                    <input type="hidden" id="recipe-id">
+                    <div class="form-group">
+                        <label for="recipe-name">Nama Resep</label>
+                        <input type="text" id="recipe-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipe-desc">Deskripsi Singkat</label>
+                        <textarea id="recipe-desc" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipe-ingredients">Bahan-bahan (pisahkan dengan koma)</label>
+                        <textarea id="recipe-ingredients" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipe-steps">Langkah-langkah (pisahkan dengan baris baru)</label>
+                        <textarea id="recipe-steps" rows="8" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipe-image">Upload Gambar</label>
+                        <input type="file" id="recipe-image" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipe-history">Sejarah Singkat (opsional)</label>
+                        <textarea id="recipe-history" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipe-tools">Peralatan (pisahkan dengan koma, opsional)</label>
+                        <textarea id="recipe-tools" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">Simpan Resep</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 ResepKu. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="js/upload.js"></script>
+    <script>
+        // Script untuk hamburger menu dan header scroll
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const header = document.querySelector('.main-header');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active'); // Add this line
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
